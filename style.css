@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box; /*Ez a sor szükséges, hogy a divek mérete megfelelő legyen, ugyanis így beleszámolja a teljes méretbe a paddinget és a bordert is*/
+  }
+  
+  .szamologep{
+      background-color: black; 
+      padding: 20px; /*Megadja, mekkora távolságra legyen a tartalom a bordertől*/
+      max-width: 400px; /*Meghatározza, mekkora lehet a maximum szélesség, az ablak méretétől függetlenül*/
+      margin: 0 auto;
+      border: solid 1px #ccc; /*Ad a divnek egy 1px vastag, folyamatos szürke keretet*/
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /*Ad a divnek egy árnyékot, ez esetben x tengelyen 0px, y tengelyen 2px eltolással és 5px-es blur radiussal*/
+      border-radius: 10px; /*Lekerekíti a div körüli bordert*/
+      margin-top: 40px;
+  }
+  
+  #eredmeny{
+      background-color: yellowgreen;
+      width: 100%;
+      padding: 10px; 
+      font-size: 24px; 
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+      border-radius: 5px;
+  }
+  
+  .gombok{
+      display: grid; /*Átalakítja a gombok divet egy "táblázattá", ennek köszönhetően jelennek meg a gombok egy rácsos szerkezetben*/
+      grid-template-columns: repeat(4, 1fr);/*Emiatt a sor miatt lehetnek egységesen elhelyezve a táblázatban a gombok*/
+      grid-gap: 10px;
+      margin-top: 20px;
+  }
+  
+  button{
+      padding: 10px;
+      font-size: 24px;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      cursor: pointer; /*Ez a sor annyit tesz, hogy mikor a kurzorunk a gomb fölé ér, az egy mutató ujjá változik*/
+      transition: background-color 0,3s ease; /*Megadja, mennyi idő teljen el mielőtt a gomb színe megváltozik miután fölé vittük a kurzort*/
+  }
+  
+  button:hover{
+      background-color: #ddd; /*Emiatt a sor miatt ha valamelyik gomb fölé visszük a kurzort, a gomb szürkévé változik*/
+  }
+  
+  .torles{
+      background-color: #ff4136;
+      color: #fff;
+  }
+  
+  .szam, .tizedes{
+      background-color: #fff;
+      color: #333;
+  
+  }
+  
+  .muvelet{
+      background-color: #0074d9;
+      color: #fff
+  }
+  
+  .egyenlo{
+      background-color: #01ff70;
+      grid-row: span 3; /*Emiatt a sor miatt lehet a "=" gomb 3 sor magas. */
+      color: #fff;
+  }
